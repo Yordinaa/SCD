@@ -4,7 +4,7 @@ This project simulates the phases of the Software Development Life Cycle (SDLC) 
 # Project Overview
 The SDLC phases are modeled as sequential processes with specific durations:
 
-# Requirements Gathering
+Requirements Gathering <br>
 Design <br>
 Development <br>
 Testing <br>
@@ -33,22 +33,25 @@ You can install the required libraries using the following command:
 <b>How to Run the Project
 Clone this repository to your local machine:</b>
 
-* git clone <repository_url>
-* cd <repository_folder>
+* git clone [<repository_url>](https://github.com/Yordinaa/SCD)
+<!-- * cd <repository_folder> -->
 
 Run the Python script:
-* python sdlc_simulation.py
+
+```
+python3 SDLC_Simulation.py
+```
 
 
-License
+# License
 This project is licensed under the MIT License.
 
-Author
+# Author
 1. Yordanos Negusu
 2. Yoseph Zewdu
 3. Rediet Teklay
 4. Yoseph Shemeles
 
-Contributions
+# Contributions
 Contributions are welcome! If you'd like to add new features (e.g., parallel processes, resource constraints), feel free to fork the project and submit a pull request.
 
