@@ -33,7 +33,7 @@ You can install the required libraries using the following command:
 <b>How to Run the Project
 Clone this repository to your local machine:</b>
 
-* git clone [<repository_url>](https://github.com/Yordinaa/SCD)
+* git clone https://github.com/Yordinaa/SCD
 <!-- * cd <repository_folder> -->
 
 Run the Python script:
