@@ -29,7 +29,9 @@ To run this project, ensure you have the following dependencies installed:
 
 You can install the required libraries using the following command:
 
-<i>pip install simpy matplotlib</i>
+```
+pip install simpy matplotlib
+```
 
 <b>How to Run the Project
 Clone this repository to your local machine:</b>
