@@ -45,7 +45,7 @@ This project is licensed under the MIT License.
 
 Author
 1. Yordanos Negusu
-2. Yoseph zewdie
+2. Yoseph Zewdu
 3. Rediet Teklay
 4. Yoseph Shemeles
 
