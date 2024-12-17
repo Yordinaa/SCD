@@ -4,11 +4,12 @@ This project simulates the phases of the Software Development Life Cycle (SDLC) 
 # Project Overview
 The SDLC phases are modeled as sequential processes with specific durations:
 
-Requirements Gathering <br>
-Design <br>
-Development <br>
-Testing <br>
-Deployment <br>
+- Requirements Gathering <br>
+- Design <br>
+- Development <br>
+- Testing <br>
+- Deployment <br>
+
 The simulation records the start and end times of each phase and visualizes them in a Gantt chart-style plot to display the flow of the SDLC timeline.
 
 # Features
