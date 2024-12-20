@@ -8,7 +8,10 @@ phase_times = []
 def requirements_gathering(env, team_size):
     start_time = env.now
     print(f"Requirements Gathering started at {start_time}")
-    yield env.timeout(2)  # Duration of requirements gathering (e.g., 2 weeks)
+    base_duration = 4  # Base duration in weeks
+    efficiency_factor = 0.5
+    adjusted_duration = round(base_duration / (1 + (team_size - 1) * efficiency_factor))
+    yield env.timeout(adjusted_duration)
     end_time = env.now
     print(f"Requirements Gathering completed at {end_time}")
     phase_times.append(('Requirements Gathering', start_time, end_time))
@@ -16,7 +19,10 @@ def requirements_gathering(env, team_size):
 def design(env, team_size):
     start_time = env.now
     print(f"Design started at {start_time}")
-    yield env.timeout(1)  # Duration of design (e.g., 1 week)
+    base_duration = 2
+    efficiency_factor = 0.5
+    adjusted_duration = round(base_duration / (1 + (team_size - 1) * efficiency_factor))
+    yield env.timeout(adjusted_duration)
     end_time = env.now
     print(f"Design completed at {end_time}")
     phase_times.append(('Design', start_time, end_time))
@@ -24,7 +30,10 @@ def design(env, team_size):
 def development(env, team_size):
     start_time = env.now
     print(f"Development started at {start_time}")
-    yield env.timeout(3)  # Duration of development (e.g., 3 weeks)
+    base_duration = 8
+    efficiency_factor = 0.75
+    adjusted_duration = round(base_duration / (1 + (team_size - 1) * efficiency_factor))
+    yield env.timeout(adjusted_duration)
     end_time = env.now
     print(f"Development completed at {end_time}")
     phase_times.append(('Development', start_time, end_time))
@@ -32,7 +41,10 @@ def development(env, team_size):
 def testing(env, team_size):
     start_time = env.now
     print(f"Testing started at {start_time}")
-    yield env.timeout(2)  # Duration of testing (e.g., 2 weeks)
+    base_duration = 3
+    efficiency_factor = 0.75
+    adjusted_duration = round(base_duration / (1 + (team_size - 1) * efficiency_factor))
+    yield env.timeout(adjusted_duration)
     end_time = env.now
     print(f"Testing completed at {end_time}")
     phase_times.append(('Testing', start_time, end_time))
@@ -40,10 +52,14 @@ def testing(env, team_size):
 def deployment(env, team_size):
     start_time = env.now
     print(f"Deployment started at {start_time}")
-    yield env.timeout(1)  # Duration of deployment (e.g., 1 week)
+    base_duration = 1
+    efficiency_factor = 0.25
+    adjusted_duration = round(base_duration / (1 + (team_size - 1) * efficiency_factor))
+    yield env.timeout(adjusted_duration)
     end_time = env.now
     print(f"Deployment completed at {end_time}")
     phase_times.append(('Deployment', start_time, end_time))
+
 
 # Simulation setup
 def run_sdlc(env, team_size):
@@ -71,8 +87,11 @@ end_times = [phase[2] for phase in phase_times]
 # Plotting the results
 fig, ax = plt.subplots(figsize=(10, 6))
 
+# Calculate phase durations
+durations = [end - start for start, end in zip(start_times, end_times)]
+
 # Plot each phase as a horizontal bar
-ax.barh(phase_names, end_times, left=start_times, color='skyblue')
+ax.barh(phase_names, durations, left=start_times, color='skyblue')
 
 # Add labels and title
 ax.set_xlabel('Time')
