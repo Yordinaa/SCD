@@ -15,10 +15,12 @@ The simulation records the start and end times of each phase and visualizes them
 # Features
 
 1. Simulates each SDLC phase using SimPy with time-based delays.
-
-2. Outputs the start and end times for all phases.
-3. Generates a visual timeline of the SDLC phases using Matplotlib.
-4. Modular design: each SDLC phase is implemented as a separate function.
+2. Allows dynamic input for team size and base durations for each SDLC phase.
+3. Outputs the start and end times for all phases.
+4. Calculates the total cost of the SDLC based on team size and phase durations.
+5. Logs milestones for critical events within phases.
+6. Generates a visual timeline of the SDLC phases using Matplotlib.
+7. Modular design: each SDLC phase is implemented as a separate function.
 
 # Requirements
 To run this project, ensure you have the following dependencies installed:
